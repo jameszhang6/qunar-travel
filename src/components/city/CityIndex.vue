@@ -39,8 +39,9 @@
         <div class="hot-city">重庆</div>
         <div class="hot-city">重庆</div>
       </div>
+      <!-- 字母列表 -->
       <div class="letters">
-        <div>&nbsp;</div>
+        <!--<div>&nbsp;</div>-->
         <div>A</div>
         <div>B</div>
         <div>B</div>
@@ -95,7 +96,7 @@ export default {
     this.axios.get(`/api/china_city_data.json`).then(response => { //成功的回调函数
       // response.data 表示返回的 Promise 对象的数据
        const cities = response.data.data.cities;
-       console.dir(cities);
+       //console.dir(cities);
        this.letterCitys = cities;
 
     },err => { // 失败回调函数
@@ -182,12 +183,16 @@ export default {
       .hot-city
         city() // mixins.styl中定义的 stylus 函数
     .letters
-      float right
+      position fixed
+      right 1px
       width 2%
-      padding-right 8px
-      padding-bottom 10px
+      padding-right 10px
+      padding-top 10px
       text-align right
+      font-size 16px
       color $bgColor
+    .letters > div
+      height 20px
   .city-by-letter
     height 30px
     line-height 30px
