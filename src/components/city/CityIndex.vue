@@ -96,7 +96,6 @@ export default {
     this.axios.get(`/api/china_city_data.json`).then(response => { //成功的回调函数
       // response.data 表示返回的 Promise 对象的数据
        const cities = response.data.data.cities;
-       //console.dir(cities);
        this.letterCitys = cities;
 
     },err => { // 失败回调函数
