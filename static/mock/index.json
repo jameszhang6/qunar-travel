@@ -1,0 +1,159 @@
+{
+  "ret": true,
+  "data": {
+    "swiperList": [
+      {
+        "id": "0001",
+        "url": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20195/dc11f0bb94057224b104a2017f313e21.jpg_750x200_feee379d.jpg"
+      },
+      {
+        "id": "0002",
+        "url": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/17e2352b857f66e9d2948e98dc483bc2.jpg_750x200_2857d0a3.jpg"
+      },
+      {
+        "id": "0003",
+        "url": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/d7bbc21db442366a882e04ddc984669a.jpg_750x200_85e640d9.jpg"
+      },
+      {
+        "id": "0004",
+        "url": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/e5104d77fbfdb522bd4fe4f0451e517f.jpg_750x200_7d44f64b.jpg"
+      }
+    ],
+    "iconList": [
+      {
+        "id": "0001",
+        "url": "http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
+        "desc": "热门景点"
+      },
+      {
+        "id": "0002",
+        "url": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/f0f00d6dfe038c044dbc9a437f58b0eb.png",
+        "desc": "北京一日游"
+      },
+      {
+        "id": "0003",
+        "url": "http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png",
+        "desc": "北京必游"
+      },
+      {
+        "id": "0004",
+        "url": "http://img1.qunarzz.com/piao/fusion/1803/47/c2b659e048b11602.png",
+        "desc": "溜娃儿"
+      },
+      {
+        "id": "0005",
+        "url": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20191/0334cf5430b9b5505fd79e2b8d7e8670.png",
+        "desc": "爬长城"
+      },
+      {
+        "id": "0006",
+        "url": "http://img1.qunarzz.com/piao/fusion/1803/6c/9e54a8540fee0102.png",
+        "desc": "故宫"
+      },
+      {
+        "id": "0007",
+        "url": "http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png",
+        "desc": "动植物园 "
+      },
+      {
+        "id": "0008",
+        "url": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20195/35d83bb968d80d54926f30cfb92cb6ff.png",
+        "desc": "每周好货"
+      },
+      {
+        "id": "0009",
+        "url": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/b4511345827006994aa1980a3886f0ac.png",
+        "desc": "北京世园会"
+      },
+      {
+        "id": "0010",
+        "url": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/338c5b924c5809e8c7b14f60a953c3e2.png",
+        "desc": "北京欢乐谷"
+      }],
+    "recommendList": [
+      {
+        "id": "0001",
+        "url": "http://img1.qunarzz.com/sight/p0/1902/84/84696f368bbec10da3.img.jpg_200x200_50323152.jpg",
+        "title": "北京世界园艺博览会",
+        "desc": "浪漫世界大都市，绚丽的世界的园艺博览会",
+        "price": 108,
+        "location": "延庆县"
+      },
+      {
+        "id": "0002",
+        "url": "http://img1.qunarzz.com/sight/p0/1708/2b/2b3b94de99c0a425a3.img.jpg_200x200_2458ffb2.jpg",
+        "title": "八达岭长城",
+        "desc": "八达岭长城八达岭长城成人票+梦幻球幕影院+长城礼物（3选1）",
+        "price": 30,
+        "location": "延庆县"
+      },
+      {
+        "id": "0003",
+        "url": "http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_200x200_1bc99086.jpg",
+        "title": "故宫",
+        "desc": "【上午场】故宫成人票凭身份证快速入园（旺季）",
+        "price": 60,
+        "location": "东城区"
+      },
+      {
+        "id": "0004",
+        "url": "http://img1.qunarzz.com/sight/p0/1508/89/895a1b7add84f23faca053ce9e3153db.water.jpg_200x200_99ae30ee.jpg",
+        "title": "北京欢乐谷",
+        "desc": "北京欢乐谷（全天）门票成人票(重游畅玩全天票)",
+        "price": 195,
+        "location": "朝阳区"
+      },
+      {
+        "id": "0005",
+        "url": "http://img1.qunarzz.com/sight/p0/1507/36/ce3d2d6c9ab44d67ae68d940b8781829.water.jpg_200x200_0938a8f2.jpg",
+        "title": "北京野生动物园",
+        "desc": "[平日]北京野生动物园成人票",
+        "price": 122,
+        "location": "大兴区"
+      },
+      {
+        "id": "0006",
+        "url": "http://img1.qunarzz.com/sight/p0/1603/85/85c883189bf7293390.water.jpg_200x200_3165123d.jpg",
+        "title": "什刹海",
+        "desc": "【成人-刷证件入园】恭王府门票+手机电子讲解",
+        "price": 9.9,
+        "location": "西城区"
+      }],
+    "weekendList": [
+      {
+        "id": "0001",
+        "url": "http://img1.qunarzz.com/sight/source/1603/6d/2f67ae0659f41f.jpg_r_640x214_bf6cbd0b.jpg",
+        "title": "北京赏花好地方",
+        "desc": "乱花渐欲迷人眼，京城赏花大搜索",
+        "price": 90
+      },
+      {
+        "id": "0002",
+        "url": "http://img1.qunarzz.com/sight/source/1811/f3/86173f863bef61.jpg_r_640x214_52b003ac.jpg",
+        "title": "京城周末撒欢",
+        "desc": "在帝都过周末，不仅仅是城中游！",
+        "price": 78
+      },
+      {
+        "id": "0003",
+        "url": "http://img1.qunarzz.com/sight/source/1811/7e/476589267ebb41.jpg_r_640x214_bf599709.jpg",
+        "title": "京城溜娃必去",
+        "desc": "【德智体美劳全面发展的亲子日，这些地方该去看看…",
+        "price": 55
+      },
+      {
+        "id": "0004",
+        "url": "http://img1.qunarzz.com/sight/source/1505/aa/7baaf8a851d221.jpg_r_640x214_1431200f.jpg",
+        "title": "帝都必打卡",
+        "desc": "来北京必去的景点非这些地方莫属",
+        "price": 188
+      },
+      {
+        "id": "0005",
+        "url": "http://img1.qunarzz.com/sight/source/1505/9e/21df651e19af5d.jpg_r_640x214_3ea5bb38.jpg",
+        "title": "寻找北京的皇城范儿",
+        "desc": "数百年的宫廷庙宇，至今依旧威严霸气",
+        "price": 88
+      }]
+  }
+}

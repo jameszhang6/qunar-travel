@@ -1,0 +1,170 @@
+{
+  "ret": true,
+  "data": {
+    "swiperList": [
+      {
+        "id": "01",
+        "url": "http://img1.qunarzz.com/piao/fusion/1803/5c/969bfa7af00a2702.jpg_640x200_e1b76963.jpg"
+      }, {
+        "id": "02",
+        "url": "http://img1.qunarzz.com/piao/fusion/1804/8b/f7f0585bbb539202.jpg_640x200_c4096429.jpg"
+      }, {
+        "id": "03",
+        "url": "http://img1.qunarzz.com/piao/fusion/1804/a1/78777120905ad102.jpg_640x200_61dc497d.jpg"
+      }, {
+        "id": "04",
+        "url": "http://img1.qunarzz.com/piao/fusion/1609/69/e232563244dbc302.jpg_640x200_5d31908b.jpg"
+      }, {
+        "id": "05",
+        "url": "http://img1.qunarzz.com/piao/fusion/1804/4e/6d2b0ee104d49902.jpg_640x200_cba762cf.jpg"
+      }, {
+        "id": "06",
+        "url": "http://img1.qunarzz.com/piao/fusion/1804/d3/b7a5b50ae4303802.jpg_640x200_21c33b0e.jpg"
+      }, {
+        "id": "07",
+        "url": "http://img1.qunarzz.com/piao/fusion/1611/f2/07228617c0a18f02.jpg_640x200_5dd40902.jpg"
+      }, {
+        "id": "08",
+        "url": "http://img1.qunarzz.com/piao/fusion/1803/39/03048973b6839302.jpg_640x200_d3d1d43b.jpg"
+      }, {
+        "id": "09",
+        "url": "http://img1.qunarzz.com/piao/fusion/1804/bd/8e4a1c3f470d3702.jpg_640x200_fdd137a8.jpg"
+      }],
+    "iconList": [
+      {
+        "id": "01",
+        "url": "http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
+        "desc": "景点门票"
+      },
+      {
+        "id": "02",
+        "url": "http://img1.qunarzz.com/piao/fusion/1803/96/c70f1e85ae4a4f02.png",
+        "desc": "自然风光"
+      },
+      {
+        "id": "03",
+        "url": "http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png",
+        "desc": "必游榜单"
+      },
+      {
+        "id": "04",
+        "url": "http://img1.qunarzz.com/piao/fusion/1803/bd/9f7b9b2b60c1502.png",
+        "desc": "踏青赏花"
+      },
+      {
+        "id": "05",
+        "url": "http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png",
+        "desc": "一日游"
+      },
+      {
+        "id": "06",
+        "url": "http://img1.qunarzz.com/piao/fusion/1803/89/55083b0f1951f302.png",
+        "desc": "游船游艇"
+      },
+      {
+        "id": "07",
+        "url": "http://img1.qunarzz.com/piao/fusion/1803/96/c70f1e85ae4a4f02.png",
+        "desc": "神秘武隆"
+      },
+      {
+        "id": "08",
+        "url": "http://img1.qunarzz.com/piao/fusion/1803/e3/67df61427c8e1302.png",
+        "desc": "演出"
+      },
+      {
+        "id": "09",
+        "url": "http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png",
+        "desc": "动植"
+      },
+      {
+        "id": "10",
+        "url": "http://img1.qunarzz.com/piao/fusion/1803/80/416c6ab3368d1f02.png",
+        "desc": "全部"
+      }],
+    "recommendList": [
+      {
+        "id": "01",
+        "title": "武隆天坑地缝国家地质公园",
+        "desc": "天生三桥天龙桥，青龙桥，黑龙桥。又名头道桥，高大厚重，气势磅礴，以雄壮称奇。",
+        "location": "重庆市武隆县",
+        "price": "57",
+        "url": "http://img1.qunarzz.com/sight/p0/1505/be/be4802e10f3b3107.water.jpg_200x200_0e98aabe.jpg"
+      },
+      {
+        "id": "02",
+        "title": "重庆柏联温泉",
+        "desc": "荟萃中国山水园林艺术之精髓，在瀑布、森林中营造出了回 归自然的诗情画意。",
+        "location": "重庆市北碚区",
+        "price": "288",
+        "url": "http://img1.qunarzz.com/sight/p0/201401/29/8e60d7bb448bc8d4652efb382324076f.jpg_200x200_45d36d9b.jpg"
+      },
+      {
+        "id": "03",
+        "title": "梦幻奥陶纪",
+        "desc": "梦幻奥陶纪景区—全球高空体验式旗舰项目、全国高空项目集合地景区。距重庆主城1.5小时车程，位于重庆万盛黑山之巅，海拔1300米，各种创新的“悬崖、高空、刺激、惊险项目”成为景区独特的玩法。",
+        "location": "重庆市万盛区",
+        "price": "90",
+        "url": "http://img1.qunarzz.com/sight/p0/1707/c5/c568c1adf9b18efa3.img.jpg_200x200_803087d7.jpg"
+      },
+      {
+        "id": "04",
+        "title": "酉阳桃花源",
+        "desc": "酉阳桃花源是一个距今3亿年“天坑、溶洞、地下河”三位一体的退化天坑，酉阳桃花源核心景区由世外桃源和太古洞两个部分组成。",
+        "location": "重庆市酉阳县土家族苗族自治县桃花源路232号",
+        "price": "74",
+        "url": "http://img1.qunarzz.com/sight/p0/1708/ef/ef538bb8d9911483a3.img.jpg_200x200_dd73d5c7.jpg"
+      },
+      {
+        "id": "05",
+        "title": "黑山谷",
+        "desc": "黑山谷景区的鲤鱼河及其支流神龙沟、麻坝河、白溪沟等数十条溪涧，形成众多的浅滩、深潭、流泉、飞瀑、暗河，使黑山谷溪水长碧，四季不枯！",
+        "location": "重庆市万盛区黑山镇境内",
+        "price": "90",
+        "url": "http://img1.qunarzz.com/sight/p0/201305/08/8638c7dbd656cafac8d65eac.jpg_200x200_4824cf98.jpg"
+      },
+      {
+        "id": "06",
+        "title": "重庆欢乐谷",
+        "desc": "尖峰时刻、旋转木马、桑巴气球，迷你版的摇摆旋转设备，集升降、公转、自转于一体，游客可以自行控制座舱的自转，在曼妙的配乐中浪漫旋转、翩翩起舞，就象是在跳桑巴舞一样，尽享南美异域的热烈风情",
+        "location": "重庆市渝北区",
+        "price": "58",
+        "url": "http://img1.qunarzz.com/sight/p0/1709/7b/7bf5984d7e6a3c2da3.img.jpg_200x200_5fb349d9.jpg"
+      }],
+    "weekendList": [
+      {
+        "id": "01",
+        "title": "重庆必游TOP10",
+        "desc": "重庆，非去不可",
+        "url": "http://img1.qunarzz.com/sight/source/1505/53/4bcd11cc3a5374.jpg_r_640x214_988a4cee.jpg",
+        "price": 100
+      },
+      {
+        "id": "02",
+        "title": "重庆优质汤泉",
+        "desc": "细数重庆那些最赞的温泉",
+        "url": "http://img1.qunarzz.com/sight/source/1505/5f/276ed6784d25ee.jpg_r_640x214_2193082e.jpg",
+        "price": 190
+      },
+      {
+        "id": "03",
+        "title": "踏青好去处",
+        "desc": "热爱自然，喜欢户外的你千万别错过",
+        "url": "http://img1.qunarzz.com/sight/source/1505/48/f5bc37dba8b542.jpg_r_640x214_d33cd232.jpg",
+        "price": 88
+      },
+      {
+        "id": "04",
+        "title": "重庆大美古镇",
+        "desc": "行走重庆最美古镇，让你瞬间穿越千年",
+        "url": "http://img1.qunarzz.com/sight/source/1505/48/f117e9b3bf582a.jpg_r_640x214_b8145711.jpg",
+        "price": 50
+      },
+      {
+        "id": "05",
+        "title": "本地人带你耍",
+        "desc": "玩转小面之都，High翻天",
+        "url": "http://img1.qunarzz.com/sight/source/1506/1e/f97881dbd07520.jpg_r_640x214_f8c25916.jpg",
+        "price": 100
+      }]
+  }
+}

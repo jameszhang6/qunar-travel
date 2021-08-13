@@ -1,0 +1,74 @@
+{
+  "ret": true,
+  "data": {
+    "sightName": "香港迪士尼乐园",
+    "bannerImg": "https://img1.qunarzz.com/sight/p0/1801/4e/4ee5653be58dcb1a3.water.jpg_600x330_f82a1d80.jpg",
+    "gallaryImg": [
+      "https://imgs.qunarzz.com/sight/p0/1801/4e/4ee5653be58dcb1a3.water.jpg_r_800x800_279b846f.jpg",
+      "https://imgs.qunarzz.com/sight/p0/1803/56/56f59615373d8dbba3.water.jpg_r_800x800_31653ab3.jpg",
+      "https://imgs.qunarzz.com/sight/p0/1803/f9/f9150e0e156d6052a3.water.jpg_r_800x800_57f9c532.jpg",
+      "https://imgs.qunarzz.com/sight/p0/1803/5f/5fb0ce15bb200219a3.water.jpg_r_800x800_d47fb2bc.jpg",
+      "https://imgs.qunarzz.com/sight/p0/1803/e1/e101b0bb94fcdb75a3.water.jpg_r_800x800_d7125ead.jpg",
+      "https://imgs.qunarzz.com/sight/p0/1705/54/5425ab696de64effa3.water.jpg_r_800x800_74a2da66.jpg",
+      "https://imgs.qunarzz.com/sight/p0/1512/b3/b35b09ed9679170e90.water.jpg_r_800x800_a0d122d4.jpg"
+    ],
+    "categoryList": [
+      {
+        "title": "成人票12-64岁",
+        "children": [
+          {
+            "title": "迪士尼1日标准门票",
+            "price": 443
+          },
+          {
+            "title": "迪士尼2日优惠标准门票（7日内入园）",
+            "price": 585
+          },
+          {
+            "title": "迪士尼2日标准门票（7日内入园）",
+            "price": 585
+          }
+        ]
+      },
+      {
+        "title": "儿童票3-11岁",
+        "children": [
+          {
+            "title": "迪士尼1日小童门票",
+            "price": 354
+          },
+          {
+            "title": "迪士尼2日优惠小童门票（7日内入园）",
+            "price": 436.8
+          }
+        ]
+      },
+      {
+        "title": "老人票65岁及以上",
+        "children": [
+          {
+            "title": "1日长者门票",
+            "price": 88
+          },
+          {
+            "title": "2日长者门票",
+            "price": 150
+          }
+        ]
+      },
+      {
+        "title": "亲子票",
+        "children": [
+          {
+            "title": "1日亲子套票（1大1小）",
+            "price": 830
+          },
+          {
+            "title": "1日亲子套票（2大1小）",
+            "price": 1288
+          }
+        ]
+      }
+    ]
+  }
+}
