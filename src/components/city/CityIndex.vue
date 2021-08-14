@@ -1,106 +1,95 @@
 <template>
   <div class="city">
-    <div class="city-header">
-      <div class="header-title">
-        <div><span class="iconfont icon-fanhui back-icon"></span></div>
-        <div class="select-city-title">城市选择</div>
+    <div>
+      <div class="city-header">
+        <div class="header-title">
+          <div><span class="iconfont icon-fanhui back-icon"></span></div>
+          <div class="select-city-title">城市选择</div>
+        </div>
+        <div class="header-input-bar">
+          <input type="text" class="header-input" placeholder="输入城市名或拼音">
+        </div>
       </div>
-      <div class="header-input-bar">
-        <input type="text" class="header-input" placeholder="输入城市名或拼音">
+      <h1 class="my-location-title">我的位置</h1>
+      <div class="my-location-city">
+        <div class="my-city">重庆</div>
       </div>
-    </div>
-    <h1 class="my-location-title">我的位置</h1>
-    <div class="my-location-city">
-      <div class="my-city">重庆</div>
-    </div>
-    <h1 class="my-hotcity-title">热门城市</h1>
-    <div class="hot-cities">
-      <div class="hot-city-list">
-        <div class="hot-city">重庆</div>
-        <div class="hot-city">重庆</div>
-        <div class="hot-city">重庆</div>
-        <div class="hot-city">重庆</div>
-        <div class="hot-city">重庆</div>
-        <div class="hot-city">重庆</div>
-        <div class="hot-city">重庆</div>
-        <div class="hot-city">重庆</div>
-        <div class="hot-city">重庆</div>
-        <div class="hot-city">重庆</div>
-        <div class="hot-city">重庆</div>
-        <div class="hot-city">重庆</div>
-        <div class="hot-city">重庆</div>
-        <div class="hot-city">重庆</div>
-        <div class="hot-city">重庆</div>
-        <div class="hot-city">重庆</div>
-        <div class="hot-city">重庆</div>
-        <div class="hot-city">重庆</div>
-        <div class="hot-city">重庆</div>
-        <div class="hot-city">重庆</div>
-        <div class="hot-city">重庆</div>
-        <div class="hot-city">重庆</div>
+      <h1 class="my-hotcity-title">热门城市</h1>
+      <div class="hot-cities">
+        <div class="hot-city-list">
+          <div v-for="city in hotCities" :key="city.id">{{ city.name }}</div>
+        </div>
+        <!-- 字母列表 -->
+        <div class="letters">
+          <div v-for="(item, letter,index) in cities"
+               :key="index"
+               @click="scrollToLetterCity(`${letter}`)">
+            {{ letter }}
+          </div>
+        </div>
       </div>
-      <!-- 字母列表 -->
-      <div class="letters">
-        <!--<div>&nbsp;</div>-->
-        <div>A</div>
-        <div>B</div>
-        <div>B</div>
-        <div>B</div>
-        <div>B</div>
-        <div>B</div>
-        <div>B</div>
-        <div>B</div>
-        <div>B</div>
-        <div>B</div>
-        <div>A</div>
-        <div>B</div>
-        <div>B</div>
-        <div>B</div>
-        <div>B</div>
-        <div>B</div>
-        <div>B</div>
-        <div>B</div>
-        <div>B</div>
-        <div>B</div>
-        <div>B</div>
-        <div>B</div>
-        <div>B</div>
-        <div>B</div>
-        <div>B</div>
-        <div>B</div>
+      <div style="clear: both;"></div>
+      <!-- 每个字母列表城市 -->
+      <div ref="wrapper" class="wrapper">
+        <div class="content">
+          <div v-for="(letterCity,letter,index) in cities" :key="index" :ref="letter">
+            <!-- 每个字母 -->
+            <h1 class="letter-city">{{ letter }}</h1>
+            <!-- 某个字母的城市列表 -->
+            <ul style="background:#fff;" >
+              <li v-for="city in cities[letter]" :key="city.id" class="city-by-letter">{{ city.name }}</li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </div>
-    <div style="clear: both;"></div>
-    <!-- 字母列表城市 -->
-    <div v-for="(letterCity,letter,index) in letterCitys" :key="index">
-      <!-- 每个字母 -->
-      <h1 class="letter-city">{{ letter }}</h1>
-      <!-- 每个字母的城市列表 -->
-      <ul style="background:#fff;" >
-        <li v-for="city in letterCitys[letter]" :key="city.id" class="city-by-letter">{{ city.name }}</li>
-      </ul>
     </div>
   </div>
 </template>
 
 <script>
+import BScroll from 'better-scroll'
 export default {
   name: "City",
   data() {
     return {
-      letterCitys: []
+      cities: [],
+      hotCities: [],
+      // scroll: null
+    }
+  },
+  methods: {
+    scrollToLetterCity(letter) {
+      console.log('scroll to: %s',letter);
+      // 滚动到哪个DOM元素, this.$refs['A'] === this.$refs.A
+      let letterElement = this.$refs[letter][0]
+      console.dirxml(letterElement);
+
+      //滚动到 letterElement 元素的位置
+      // this.scroll.scrollToElement(letterElement, 500);
+      this.scroll.scrollToElement(letterElement, 1000);
+      console.log(">>> scrollToElement");
     }
   },
   mounted() {
     // 使用axios请求 mock（模拟） 数据
     this.axios.get(`/api/china_city_data.json`).then(response => { //成功的回调函数
       // response.data 表示返回的 Promise 对象的数据
-       const cities = response.data.data.cities;
-       this.letterCitys = cities;
+      this.cities = response.data.data.cities;
+      this.hotCities = response.data.data.hotCities;
 
     },err => { // 失败回调函数
       console.error(err);
     })
+
+    // 创建 better-scroll 实例去接管可滚动的区域
+    console.log('==================>>');
+    // this.scroll = new BScroll(this.$refs.wrapper);
+
+    let wrapper = document.querySelector(".wrapper")
+    this.scroll = new BScroll(wrapper, {})
+
+    console.log('***************>>');
+    console.log(this.scroll);
   }
 }
 </script>
@@ -109,7 +98,7 @@ export default {
 @import "~styles/variables.styl"
 @import "~styles/mixins.styl"
 .city
-  height 100%
+  height 300px
   background #eaeaea
   .city-header
     display flex  // 弹性盒子模型
@@ -145,10 +134,48 @@ export default {
     padding 10px
     font-size 18px
     color $descTextColor
-  .letter-city
-    height 18px
-    line-height 18px
-    vertical-align center
+  .hot-cities
+    position relative
+    float left
+    width 100%
+    background: #fff;
+    .hot-city-list
+      float left
+      display grid
+      grid-template-columns: repeat(3, 1fr); /* fr 单位是一个自适应单位*/
+      grid-auto-rows: minmax(25px, auto);
+      width 94%
+      //border 1px solid red
+      padding-top 4px
+      padding-bottom 4px
+    .hot-city-list > div
+      city() // mixins.styl中定义的 stylus 函数
+    .letters
+      position fixed
+      right 1px
+      width 2%
+      padding-right 10px
+      padding-top 10px
+      text-align right
+      font-size 16px
+      color $bgColor
+    .letters > div
+      height 20px
+  .wrapper
+    height 500px
+    .content /* 滚动内容 */
+      .letter-city
+        height 18px
+        line-height 18px
+        vertical-align center
+        background: #eaeaea
+      .city-by-letter
+        height 30px
+        line-height 30px
+        border-bottom 1px solid #eaeaea
+        padding-left 15px
+        font-size 16px
+        color $darkTextColor
   .my-location-city /* 我的城市 */
     display flex
     align-items center
@@ -165,6 +192,7 @@ export default {
       vertical-align middle //文字垂直居中
       font-size 16px
       color $darkTextColor
+/*
   .hot-cities
     position relative
     float left
@@ -173,16 +201,17 @@ export default {
     .hot-city-list
       float left
       display grid
-      grid-template-columns: repeat(3, 1fr); /* fr 单位是一个自适应单位*/
+      grid-template-columns: repeat(3, 1fr); !* fr 单位是一个自适应单位*!
       grid-auto-rows: minmax(25px, auto);
       width 94%
       //border 1px solid red
       padding-top 4px
       padding-bottom 4px
-      .hot-city
+    .hot-city-list > div
         city() // mixins.styl中定义的 stylus 函数
     .letters
       position fixed
+      float right
       right 1px
       width 2%
       padding-right 10px
@@ -192,11 +221,5 @@ export default {
       color $bgColor
     .letters > div
       height 20px
-  .city-by-letter
-    height 30px
-    line-height 30px
-    border-bottom 1px solid #eaeaea
-    padding-left 15px
-    font-size 16px
-    color $darkTextColor
+*/
 </style>

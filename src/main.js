@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
+import 'babel-polyfill'
 
 // 轮播图组件
 import VueAwesomeSwiper from 'vue-awesome-swiper'
