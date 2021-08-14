@@ -48,12 +48,15 @@
 
 <script>
 import BScroll from 'better-scroll'
+// 将 vuex 中的getters 中所有的函数映射出来
+import { mapGetters } from 'vuex'
+
 export default {
   name: "City",
   data() {
     return {
-      cities: [],
-      hotCities: [],
+      // cities: [],
+      // hotCities: [],
       // scroll: null
     }
   },
@@ -70,7 +73,11 @@ export default {
       console.log(">>> scrollToElement");
     }
   },
+  computed: {
+    ...mapGetters(['cities','hotCities'])
+  },
   mounted() {
+    /*
     // 使用axios请求 mock（模拟） 数据
     this.axios.get(`/api/china_city_data.json`).then(response => { //成功的回调函数
       // response.data 表示返回的 Promise 对象的数据
@@ -80,16 +87,12 @@ export default {
     },err => { // 失败回调函数
       console.error(err);
     })
+  */
 
     // 创建 better-scroll 实例去接管可滚动的区域
-    console.log('==================>>');
     // this.scroll = new BScroll(this.$refs.wrapper);
-
     let wrapper = document.querySelector(".wrapper")
     this.scroll = new BScroll(wrapper, {})
-
-    console.log('***************>>');
-    console.log(this.scroll);
   }
 }
 </script>
