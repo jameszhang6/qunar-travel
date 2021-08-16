@@ -3,7 +3,9 @@
     <div>
       <div class="city-header">
         <div class="header-title">
-          <div><span class="iconfont icon-fanhui back-icon"></span></div>
+          <!-- <router-link to="/" style="color:white;"> -->
+          <div @click="backHome"><span class="iconfont icon-fanhui back-icon"></span></div>
+          <!-- </router-link> -->
           <div class="select-city-title">城市选择</div>
         </div>
         <div class="header-input-bar">
@@ -74,6 +76,11 @@ export default {
     },
     doSomething() { // 这个函数是演示用，没有用到
       //this.getHotCities();
+    },
+    backHome() {
+      console.log(99999)
+      // 导航到首页
+      this.$router.push('/')
     },
     // 将 Vuex 中 actions中定义的函数映射为组件的的 method
     ...mapActions(['getHotCities'])
