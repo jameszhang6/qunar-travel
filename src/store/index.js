@@ -6,6 +6,8 @@ import Vuex from 'vuex'
 // 注册状态管理插件
 Vue.use(Vuex)
 
+// 每个模块中包含: state,actions,mutations,getters
+// 每个对象都有一个辅助的函数：mapState(),mapActions(),mapMutations(),mapGetters()
 import City from './modules/City'
 
 export default new Vuex.Store({

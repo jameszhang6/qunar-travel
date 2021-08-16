@@ -49,7 +49,7 @@
 <script>
 import BScroll from 'better-scroll'
 // 将 vuex 中的getters 中所有的函数映射出来
-import { mapGetters } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 
 export default {
   name: "City",
@@ -71,9 +71,15 @@ export default {
       // this.scroll.scrollToElement(letterElement, 500);
       this.scroll.scrollToElement(letterElement, 1000);
       console.log(">>> scrollToElement");
-    }
+    },
+    doSomething() { // 这个函数是演示用，没有用到
+      //this.getHotCities();
+    },
+    // 将 Vuex 中 actions中定义的函数映射为组件的的 method
+    ...mapActions(['getHotCities'])
   },
   computed: {
+    // 将展开数组的两个元素作为两个计算属性
     ...mapGetters(['cities','hotCities'])
   },
   mounted() {
@@ -87,7 +93,11 @@ export default {
     },err => { // 失败回调函数
       console.error(err);
     })
-  */
+    */
+   // 调用 Vuex中 City 模块的 action 方法
+   this.getHotCities();
+   // 这种方式也可以调到 Vuex 中的 action 函数，一般会在组件的点击操作的时候用
+   //  this.$store.dispatch('getHotCities')
 
     // 创建 better-scroll 实例去接管可滚动的区域
     // this.scroll = new BScroll(this.$refs.wrapper);
