@@ -1,10 +1,10 @@
 <template>
   <div class="home">
-    <home-header></home-header>
+    <home-header :city="city"></home-header>
     <home-swiper></home-swiper>
     <home-icons></home-icons>
-    <home-recommend></home-recommend>
-    <home-weekend></home-weekend>
+    <home-recommend :list="recommendList"></home-recommend>
+    <home-weekend :list="weekendList"></home-weekend>
   </div>
 </template>
 
@@ -14,12 +14,12 @@ import HomeSwiper from './components/HomeSwiper.vue'
 import HomeIcons from './components/HomeIcons.vue'
 import HomeRecommend from './components/HomeRecommend.vue'
 import HomeWeekend from './components/HomeWeekend.vue';
+import { mapGetters } from "vuex";
 
 export default {
   name: ' Home',
   data () {
     return {
-
     }
   },
   components: {
@@ -28,6 +28,13 @@ export default {
     HomeIcons,
     HomeRecommend,
     HomeWeekend,
+  },
+  computed: {
+     city: function() {
+      console.log('本地存储城市：', localStorage.getItem('myCity'))
+      return localStorage.getItem('myCity') || '北京'
+    },
+    ...mapGetters(['recommendList','weekendList'])
   }
 }
 </script>

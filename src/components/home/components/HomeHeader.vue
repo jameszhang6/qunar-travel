@@ -22,9 +22,12 @@ export default {
   name: "HomeHeader",
   data() {
     return {
-      city: '北京'
+      // city: 'ddd'
     }
   },
+  props: {
+   city: String
+  }
 }
 </script>
 

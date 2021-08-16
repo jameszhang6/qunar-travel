@@ -5,6 +5,8 @@ import axios from "axios";
 
 // 驱动应用的数据源
 const state = {
+	recommendList: [],
+	weekendList: [],
 	cities: {},
 	hotCities: []
 }
@@ -28,8 +30,28 @@ const actions = {
 				//context.commit('storeHotCities', response.data.data)
 			})
 			.catch(err => {
-				new Error(err)
+				throw new Error(err)
 			});
+	},
+	getHomeList({commit}, myCity) {
+		let requestPath = ''
+		if(myCity === '重庆') {
+			requestPath = '/api/index_chongqing.json'
+		} else {
+			// 非重庆景点
+			requestPath = '/api/index.json'
+		}
+		console.log('Request API Path: ', requestPath)
+
+		// 加载首页热销推荐和周末去哪儿 的景点列表数据
+		axios.get(requestPath)
+			.then(response => {
+				const data = response.data.data
+				commit('storeHomeList', data)
+			})
+			.catch(err => {
+				throw new Error(err)
+			})
 	}
 }
 
@@ -42,10 +64,21 @@ const mutations = {
 	storeHotCities(state, data) {
 		state.cities = data.cities
 		state.hotCities = data.hotCities
+	},
+	// 存储返回首页时的数据到 state
+	storeHomeList(state, data) {
+		state.recommendList = data.recommendList
+		state.weekendList = data.weekendList
 	}
 }
 
 const getters = {
+	recommendList: (state) => {
+		return state.recommendList
+	},
+	weekendList: (state) => {
+		return state.weekendList
+	},
 	cities: (state) => {
 		// 这里根据需求可以再做一些数据封装
 		return state.cities

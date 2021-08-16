@@ -14,12 +14,12 @@
       </div>
       <h1 class="my-location-title">我的位置</h1>
       <div class="my-location-city">
-        <div class="my-city">重庆</div>
+        <div class="my-city">{{ myCity || '北京'}}</div>
       </div>
       <h1 class="my-hotcity-title">热门城市</h1>
       <div class="hot-cities">
         <div class="hot-city-list">
-          <div v-for="city in hotCities" :key="city.id">{{ city.name }}</div>
+          <div v-for="city in hotCities" :key="city.id" @click="changeCity(city.name)">{{ city.name }}</div>
         </div>
         <!-- 字母列表 -->
         <div class="letters">
@@ -59,7 +59,7 @@ export default {
     return {
       // cities: [],
       // hotCities: [],
-      // scroll: null
+      myCity: ''
     }
   },
   methods: {
@@ -74,33 +74,30 @@ export default {
       this.scroll.scrollToElement(letterElement, 1000);
       console.log(">>> scrollToElement");
     },
-    doSomething() { // 这个函数是演示用，没有用到
-      //this.getHotCities();
+    changeCity(cityName) { // 这个函数是演示用，没有用到
+      this.myCity = cityName
+      localStorage.myCity = cityName
+      console.log('Change city to ',localStorage.myCity)
     },
     backHome() {
-      console.log(99999)
+      //加载所选城市的热销推荐和周末去哪儿的景点数据
+      this.getHomeList(this.myCity)
       // 导航到首页
       this.$router.push('/')
     },
     // 将 Vuex 中 actions中定义的函数映射为组件的的 method
-    ...mapActions(['getHotCities'])
+    ...mapActions(['getHotCities', 'getHomeList'])
   },
   computed: {
     // 将展开数组的两个元素作为两个计算属性
     ...mapGetters(['cities','hotCities'])
   },
   mounted() {
-    /*
-    // 使用axios请求 mock（模拟） 数据
-    this.axios.get(`/api/china_city_data.json`).then(response => { //成功的回调函数
-      // response.data 表示返回的 Promise 对象的数据
-      this.cities = response.data.data.cities;
-      this.hotCities = response.data.data.hotCities;
+    // 检查 localStoreage 中是否存储了 myCity 
+    if(localStorage.myCity) {
+        this.myCity = localStorage.myCity
+    }
 
-    },err => { // 失败回调函数
-      console.error(err);
-    })
-    */
    // 调用 Vuex中 City 模块的 action 方法
    this.getHotCities();
    // 这种方式也可以调到 Vuex 中的 action 函数，一般会在组件的点击操作的时候用
