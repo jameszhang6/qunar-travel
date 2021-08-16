@@ -6,7 +6,7 @@
         <img v-for="(item,index) in scenicSpotDetail.gallaryImg" :src="item" :key="index" class="gallary">
         <!-- 每类票的信息 -->
         <div v-for="(categoryTicket,index) in scenicSpotDetail.categoryList" :key="'category'+index">
-            <h1>{{ categoryTicket.title }}</h1>
+            <h1><span class="iconfont icon-youhuiquan ticket-icon"></span> {{ categoryTicket.title }}</h1>
             <ul class="category-ticket">
                 <li v-for="(ticket,index) in categoryTicket.children" :key="'ticket'+index">
                     <div class="ticket">
@@ -15,7 +15,7 @@
                     </div>
                 </li>
             </ul>
-            <hr>
+            <!-- <hr style="color: #d3d7d4;height:1px;"> -->
         </div>
     </div>
 </template>
@@ -47,20 +47,23 @@ export default {
 <style lang="stylus" scoped>
 .gallary
   margin 3px
+.ticket-icon
+  margin-left 5px
+  color #78cdd1  
 .category-ticket
     display flex
     flex-direction column
     margin 3px
+    border-bottom 1px solid #d3d7d4
     .ticket
       display flex
       font-size 14px
       .ticket-title
-        flex 1
         padding-left 10px
       .ticket-price
         flex 1
         text-align right 
-        padding-right 10px
+        padding-right 6px
         font-size 16px
         color #f47920
 
