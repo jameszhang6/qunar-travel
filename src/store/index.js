@@ -9,9 +9,11 @@ Vue.use(Vuex)
 // 每个模块中包含: state,actions,mutations,getters
 // 每个对象都有一个辅助的函数：mapState(),mapActions(),mapMutations(),mapGetters()
 import City from './modules/City'
+import ScenicSpotDetail from "./modules/ScenicSpotDetail";
 
 export default new Vuex.Store({
 	modules: { // Vuex模块
-		City // 加载./modules/City.js
+		City, 				// 加载./modules/City.js, 城市列表模块
+		ScenicSpotDetail	// 景点详情模块
 	}
 })

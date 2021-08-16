@@ -8,7 +8,10 @@
                    :key="item.id"
                    :to="`/detail/${item.id}`"
       >-->
-      <li class="item border-bottom" v-for="item in list" :key="item.id">
+      <!-- 使用 <li>来生成 router-link 的跳转链接 -->
+      <router-link tag="li" class="item border-bottom" 
+                   v-for="item in list" :key="item.id"
+                   :to="{name: 'DetailIndex', params: {id: item.id}}">
         <div class="item-img-wrapper">
           <img class="item-img" :src="item.url" :alt="item.title">
         </div>
@@ -20,8 +23,7 @@
             <span class="item-location">{{item.location}}</span>
           </p>
         </div>
-      </li>
-<!--      </router-link>-->
+      </router-link>
     </ul>
   </div>
 </template>
