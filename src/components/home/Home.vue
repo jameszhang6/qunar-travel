@@ -14,7 +14,7 @@ import HomeSwiper from './components/HomeSwiper.vue'
 import HomeIcons from './components/HomeIcons.vue'
 import HomeRecommend from './components/HomeRecommend.vue'
 import HomeWeekend from './components/HomeWeekend.vue';
-import { mapGetters } from "vuex";
+import { mapGetters, mapActions } from "vuex";
 
 export default {
   name: ' Home',
@@ -22,12 +22,23 @@ export default {
     return {
     }
   },
+  methods: {
+    ...mapActions(['getHomeList'])
+  },
   components: {
     HomeHeader,
     HomeSwiper,
     HomeIcons,
     HomeRecommend,
     HomeWeekend,
+  },
+  created() {
+    let myCity = localStorage.getItem('myCity')
+    if(myCity) {
+      this.getHomeList(myCity)
+    } else {
+      this.getHomeList('北京')
+    }
   },
   computed: {
      city: function() {

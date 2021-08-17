@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>{{ scenicSpotDetail.sightName }} </h1>
+        <h1 class="detail-title">{{ scenicSpotDetail.sightName }} </h1>
         <img :src="scenicSpotDetail.bannerImg" alt="" srcset="">
         <h1>景点一览</h1>
         <img v-for="(item,index) in scenicSpotDetail.gallaryImg" :src="item" :key="index" class="gallary">
@@ -17,6 +17,11 @@
             </ul>
             <!-- <hr style="color: #d3d7d4;height:1px;"> -->
         </div>
+        <router-link to="/">
+            <div class="back-icon">
+                <span class="iconfont icon-fanhui back"></span>
+            </div>
+        </router-link>
     </div>
 </template>
 
@@ -45,6 +50,9 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+.detail-title
+  font-size 16px
+  padding-left 10px
 .gallary
   margin 3px
 .ticket-icon
@@ -66,5 +74,20 @@ export default {
         padding-right 6px
         font-size 16px
         color #f47920
-
+.back-icon
+  position fixed
+  top 25px
+  left 10px
+  width 40px
+  height 40px
+  line-height 40px
+  border-radius 20px
+  text-align center
+  vertical-align middle
+  background #C2C2C2
+  color #fff
+  opacity: 0.5; 
+  .back
+    font-size 18px
+    font-weight bold
 </style>

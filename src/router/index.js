@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/home/Home'
 import CityIndex from '@/components/city/CityIndex';
-import DetailIndex from '@/components/detail/DetailIndex';
+// import DetailIndex from '@/components/detail/DetailIndex';
 
 Vue.use(Router)
 
@@ -22,7 +22,7 @@ export default new Router({
     {
       path: '/detail', // /detail?id=1   
       name: 'DetailIndex',
-      component: DetailIndex
+      component: () => import('@/components/detail/DetailIndex') // 路由懒加载、延迟加载、按需加载
     }
   ],
   scrollBehavior (to, from, savedPosition) {
